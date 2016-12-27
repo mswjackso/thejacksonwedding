@@ -5,9 +5,11 @@
   <head>
 
     <!-- Essential resources -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
     <!-- Next pages -->
@@ -16,19 +18,35 @@
     <link rel="stylesheet" type="text/css" href="css/our_story.css">
     <link rel="stylesheet" type="text/css" href="css/registry.css">
     <link rel="stylesheet" type="text/css" href="css/rsvp.css">
+
+    <!-- Unnecessary resources -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>M&amp;M</title>
   </head>
 
   <body id="app">
 
-    <div id="navbar">
-      <span class="navlink" data-scroll-to="#main">Home</span>
-      <span class="navlink" data-scroll-to="#weddingDetails">Wedding Details</span>
-      <span class="navlink" data-scroll-to="#location">Location</span>
-      <span class="navlink" data-scroll-to="#ourStory">Our Story</span>
-      <span class="navlink" data-scroll-to="#registry">Registry</span>
-      <span class="navlink" data-scroll-to="#rsvp">RSVP</span>
-      <span class="stretch"></span>
-    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="navlink" data-scroll-to="#main"><a>Home</a></li>
+            <li class="navlink" data-scroll-to="#weddingDetails"><a>Wedding Details</a></li>
+            <li class="navlink" data-scroll-to="#location"><a>Location</a></li>
+            <li class="navlink" data-scroll-to="#ourStory"><a>Our Story</a></li>
+            <li class="navlink" data-scroll-to="#registry"><a>Registry</a></li>
+            <li class="navlink" data-scroll-to="#rsvp"><a>RSVP</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <div id="main">
       <div id="name">
@@ -38,23 +56,23 @@
       </div>
     </div>
 
-    <div id="weddingDetails">
+    <div id="weddingDetails" class="underConstruction">
       Wedding Details
     </div>
 
-    <div id="location">
+    <div id="location" class="underConstruction">
       Location
     </div>
 
-    <div id="ourStory">
+    <div id="ourStory" class="underConstruction">
       Our Story
     </div>
 
-    <div id="registry">
+    <div id="registry" class="underConstruction">
       Registry
     </div>
 
-    <div id="rsvp">
+    <div id="rsvp" class="underConstruction">
       RSVP
     </div>
   </body>
