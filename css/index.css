@@ -54,3 +54,27 @@
   user-select: none;
   cursor: default;
 }
+
+/* COMPONENT STYLES BELOW */
+.componentPage {
+  padding-top: 50px;
+}
+.componentPage>.mainMessage {
+  background-color: rgba(255, 255, 255, .5);
+  width: calc( 80% - 60px );
+  margin: 30px 10%;
+  padding: 10px 30px;
+  overflow: auto;
+}
+.componentPage>.mainMessage>h1 {
+  text-align: center;
+}
+.componentPage>.mainMessage>.message {
+  float: right;
+}
+
+#locationMap {
+  height: 400px;
+  width: 400px;
+  float: left;
+}
