@@ -39,7 +39,14 @@
           <ul class="nav navbar-nav">
             <li class="navlink" data-scroll-to="#main"><a>Home</a></li>
             <li class="navlink" data-scroll-to="#weddingDetails"><a>Wedding Details</a></li>
-            <li class="navlink" data-scroll-to="#location"><a>Location</a></li>
+            <li class="navlink dropdown" data-scroll-to="#location">
+              <a class="dropdown-toggle" data-toggle="dropdown">Travel &amp; Location Information</a> 
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown Link 1</a></li>
+                <li><a href="#">Dropdown Link 2</a></li>
+                <li><a href="#">Dropdown Link 3</a></li>
+              </ul>
+            </li>
             <li class="navlink" data-scroll-to="#ourStory"><a>Our Story</a></li>
             <li class="navlink" data-scroll-to="#registry"><a>Registry</a></li>
             <li class="navlink" data-scroll-to="#rsvp"><a>RSVP</a></li>
@@ -54,6 +61,7 @@
         &amp;<br />
         Melissa
       </div>
+      <div id="titleCountdown"></div>
     </div>
 
     <div id="weddingDetails" class="componentPage">
@@ -61,25 +69,48 @@
         <h1>Wedding Details</h1>
         <div class="message">
           We are getting married on November 12th of 2017. We will be getting
-          married in Santa Cruz, CA.
+          married in Santa Cruz, CA. Both the ceremony and reception will be
+          held at Roaring Camp Railroads. More info to come later!
         </div>
       </div>
     </div>
 
     <div id="location" class="componentPage">
-      <div class="mainMessage">
-        <h1>Location</h1>
-        <div id="locationMessage" class="message">
-          Test
+      <div id="locationSubPage" class="subPage">
+        <div class="mainMessage">
+          <h1>Travel &amp; Location Information</h1>
+          <div id="locationMessage" class="message">
+            Santa cruz is one of our favorite places in the world. Our wedding
+            being on Sunday gives everyone the opportunity to not only celebrate
+            with us, but have some time to enjoy this awesome area!
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3184.695607899326!2d-122.06463068468003!3d37.04090347989969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e46b5c05f0a89%3A0xf71945ac653a632b!2sRoaring+Camp+Railroads!5e0!3m2!1sen!2sus!4v1488341242768"
+                  id="locationMap"
+                  width="600"
+                  height="450"
+                  frameborder="0"
+                  style="border:0"
+                  allowfullscreen>
+          </iframe>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3184.695607899326!2d-122.06463068468003!3d37.04090347989969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e46b5c05f0a89%3A0xf71945ac653a632b!2sRoaring+Camp+Railroads!5e0!3m2!1sen!2sus!4v1488341242768"
-                id="locationMap"
-                width="600"
-                height="450"
-                frameborder="0"
-                style="border:0"
-                allowfullscreen>
-        </iframe>
+      </div>
+
+      <div id="funThingsSubPage" class="subPage">
+        <div class="mainMessage">
+          <h1>Fun Things to Do</h1>
+          <div class="message">
+            More info coming soon!
+          </div>
+        </div>
+      </div>
+
+      <div id="travelInfoSubPage" class="subPage">
+        <div class="mainMessage">
+          <h1>Travel Information</h1>
+          <div class="message">
+            More info coming soon!
+          </div>
+        </div>
       </div>
     </div>
 

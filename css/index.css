@@ -28,6 +28,14 @@
   top: 0px;
   width: 100%;
 }
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, .4);
+  cursor: pointer;
+  user-select: none;
+}
+.dropdown-menu>li>a {
+  color: white;
+}
 
 #main {
   position: absolute;
@@ -54,27 +62,30 @@
   user-select: none;
   cursor: default;
 }
+#titleCountdown {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  color: white;
+}
 
 /* COMPONENT STYLES BELOW */
 .componentPage {
   padding-top: 50px;
 }
-.componentPage>.mainMessage {
-  background-color: rgba(255, 255, 255, .5);
+.mainMessage {
+  background-color: rgba(255, 255, 255, .3);
   width: calc( 80% - 60px );
   margin: 30px 10%;
   padding: 10px 30px;
   overflow: auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, .3);
 }
-.componentPage>.mainMessage>h1 {
+.mainMessage>h1 {
   text-align: center;
+  text-decoration: underline;
 }
-.componentPage>.mainMessage>.message {
+.mainMessage>.message {
   float: right;
-}
-
-#locationMap {
-  height: 400px;
-  width: 400px;
-  float: left;
 }
