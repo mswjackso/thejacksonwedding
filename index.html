@@ -39,12 +39,12 @@
           <ul class="nav navbar-nav">
             <li class="navlink" data-scroll-to="#main"><a>Home</a></li>
             <li class="navlink" data-scroll-to="#weddingDetails"><a>Wedding Details</a></li>
-            <li class="navlink dropdown" data-scroll-to="#location">
-              <a class="dropdown-toggle" data-toggle="dropdown">Travel &amp; Location Information</a> 
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;user-select: none;">Travel &amp; Location Information</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Dropdown Link 1</a></li>
-                <li><a href="#">Dropdown Link 2</a></li>
-                <li><a href="#">Dropdown Link 3</a></li>
+                <li><a class="navlink" data-scroll-to="#location|#locationSubPage">Location Details</a></li>
+                <li><a class="navlink" data-scroll-to="#location|#funThingsSubPage">Fun Things to Do</a></li>
+                <li><a class="navlink" data-scroll-to="#location|#travelInfoSubPage">Travel Info</a></li>
               </ul>
             </li>
             <li class="navlink" data-scroll-to="#ourStory"><a>Our Story</a></li>
@@ -55,7 +55,7 @@
       </div>
     </nav>
 
-    <div id="main">
+    <div id="main" class="componentPage">
       <div id="name">
         Michael<br />
         &amp;<br />

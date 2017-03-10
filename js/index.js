@@ -31,9 +31,26 @@ $(document).ready(function() {
 
   // Set up listeners for the desktop navbar
   $('.navlink').click(function() {
-    $('html, body').animate({
-      scrollTop: $($(this).attr('data-scroll-to')).offset().top
-    }, 500, 'swing');
+
+    var mainPage = $(this).attr("data-scroll-to").split("|")[0];
+    var subPage = $(this).attr("data-scroll-to").split("|")[1];
+
+    if ($(document).scrollTop() !== $(mainPage).offset().top) {
+      $('html, body').animate({
+        scrollTop: $(mainPage).offset().top
+      }, 500, 'swing');
+    }
+
+    if (subPage) {
+      $('html, body').animate({
+        scrollLeft: $(subPage).offset().left
+      }, 500, 'swing');
+    } else {
+      $('html, body').animate({
+        scrollLeft: $(mainPage).offset().left
+      }, 500, 'swing');
+    }
+
   });
   $(document).on('scroll', function() {
     if ($('.navbar').length > 0) {
@@ -45,9 +62,6 @@ $(document).ready(function() {
       }
     }
   });
-
-  // Set up listeners for the mobile navbar
-  $()
 
   // Set up under construction areas
   $('.underConstruction').each(function() {
@@ -62,7 +76,41 @@ $(document).ready(function() {
         Under Construction\
       </div>'
     );
-
   });
 
+  // Set up picture backgrounds
+  var pictureSlots = [
+    [0, 1, 1],
+    [0, 1, 1],
+    [0, 0, 0],
+    [0, 1, 1],
+    [0, 1, 1],
+    [0, 1, 1]
+  ];
+  fillPictureSlots(pictureSlots);
+
 });
+
+function fillPictureSlots(array) {
+  for (var i = 0; i < array.length; i++) {
+    for (var j = 0; j < array[i].length; j++) {
+      if (array[i][j] == 1) {
+        var id = "pictureSlot" + i + j;
+        $(document.body).append(
+          '<div id="' + id + '" class="pictureSlot"></div>'
+        );
+
+        $("#" + id).css({
+          "position": "absolute",
+          "top": (i * 100) + "%",
+          "left": (j * 100) + "%",
+          "width": "100%",
+          "height": "100%",
+          "background-image": 'url("../images/pictureSlots/' + i + j + '.jpg")',
+          "background-size": "cover",
+          "background-color": "green"
+        });
+      }
+    }
+  }
+}
