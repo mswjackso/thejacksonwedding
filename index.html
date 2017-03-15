@@ -26,7 +26,7 @@
 
   <body id="app">
 
-    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <nav class="navbar navbar-inverse navbar-static-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -42,9 +42,8 @@
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" style="cursor: pointer;user-select: none;">Travel &amp; Location Information</a>
               <ul class="dropdown-menu">
-                <li><a class="navlink" data-scroll-to="#location|#locationSubPage">Location Details</a></li>
-                <li><a class="navlink" data-scroll-to="#location|#funThingsSubPage">Fun Things to Do</a></li>
                 <li><a class="navlink" data-scroll-to="#location|#travelInfoSubPage">Travel Info</a></li>
+                <li><a class="navlink" data-scroll-to="#location|#funThingsSubPage">Fun Things to Do</a></li>
               </ul>
             </li>
             <li class="navlink" data-scroll-to="#ourStory"><a>Our Story</a></li>
@@ -59,39 +58,146 @@
       <div id="name">
         Michael<br />
         &amp;<br />
-        Melissa
+        Melissa<br />
+        <span class="smallTitle">11/12/2017</span>
       </div>
-      <div id="titleCountdown"></div>
+      <div id="titleCountdown">Countdown: <span id="countdownTimestamp"></span></div>
     </div>
 
     <div id="weddingDetails" class="componentPage">
       <div class="mainMessage">
         <h1>Wedding Details</h1>
-        <div class="message">
+        <div id="weddingMessage" class="message">
           We are getting married on November 12th of 2017. We will be getting
           married in Santa Cruz, CA. Both the ceremony and reception will be
           held at Roaring Camp Railroads. More info to come later!
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3184.695607899326!2d-122.06463068468003!3d37.04090347989969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e46b5c05f0a89%3A0xf71945ac653a632b!2sRoaring+Camp+Railroads!5e0!3m2!1sen!2sus!4v1488341242768"
+                id="locationMap"
+                width="600"
+                height="450"
+                frameborder="0"
+                style="border:0"
+                allowfullscreen>
+        </iframe>
       </div>
     </div>
 
     <div id="location" class="componentPage">
-      <div id="locationSubPage" class="subPage">
+
+      <div id="travelInfoSubPage" class="subPage">
         <div class="mainMessage">
-          <h1>Travel &amp; Location Information</h1>
-          <div id="locationMessage" class="message">
-            Santa cruz is one of our favorite places in the world. Our wedding
-            being on Sunday gives everyone the opportunity to not only celebrate
-            with us, but have some time to enjoy this awesome area!
+          <h1>Travel Information</h1>
+          <div class="message">
+            <ul>
+              <li>Closest airports</li>
+              <ul>
+                <li>SJC (45min from Santa Cruz)</li>
+                <li>SFO (1hr 15min from Santa Cruz)</li>
+              </ul>
+              <li>Accommodations</li>
+              <ul>
+                <li>
+                  Santa cruz is a pretty popular destination, there are a TON
+                  of different lodging options in the area. The list below is
+                  just a few but there’s lots more, so stay wherever will make
+                  your stay most enjoyable. Feel free to call/text michael
+                  if you have any questions.
+                </li>
+                <li>Hotels</li>
+                <ul>
+                  <li>
+                    We did not reserve a room block because there are so many
+                    hotels to choose from in Santa Cruz. We have looked into a
+                    few different options which you can see below to try and fit
+                    your respective price ranges. If none of these seem to work
+                    for you either then don't worry just google around. Like I
+                    said, there are a lot of hotels.
+                  </li>
+                  <li>Santa Cruz</li>
+                  <ul>
+                    <li>
+                      <a href="http://www.hilton.com/search/hp/us/ca/santa_cruz/0/00000000000/0/0/0/0/20?wt.srch=1">
+                        Hampton Inn in Santa Cruz
+                      </a><br />
+                      Close to downtown Santa Cruz and the freeway, 13 minutes to the
+                      venue.
+                    </li>
+                    <li>
+                      <a href="http://www.bestwesternsantacruz.com/">
+                        Best Western Plus All Suites Inn Santa Cruz
+                      </a><br />
+                      Close to downtown Santa Cruz and the freeway, 15 minutes to the
+                      venue. They will also offer a ~15% discount if you say that
+                      you are booking to attend a wedding.
+                    </li>
+                    <li>
+                      <a href="https://www.hiexpress.com/hotels/us/en/santa-cruz/srues/hoteldetail">
+                        Holiday Inn Express Santa Cruz
+                      </a><br />
+                      Close to downtown Santa Cruz and the freeway, 13 minutes to the
+                      venue.
+                  </ul>
+                  <li>Scotts Valley</li>
+                  <ul>
+                    <li>A town nestled in the redwoods next to Santa Cruz.</li>
+                    <li>
+                      <a href="http://www3.hilton.com/en/hotels/california/hilton-santa-cruz-scotts-valley-SJCSVHF/index.html">
+                        Hilton Scotts Valley
+                      </a><br />
+                      Close to the freeway and about 10 minutes from the venue.
+                    </li>
+                    <li>
+                      <a href="http://www.bestwesternscottsvalley.com/">
+                        Best Western Scotts Valley
+                      </a><br />
+                      Close to the freeway and about 16 minutes from the venue.
+                  </ul>
+                </ul>
+                <li>Camping</li>
+                <ul>
+                  <li>
+                    <a href="http://www.parks.ca.gov/?page_id=546">
+                      Henry Cowell Redwoods Campground
+                    </a><br />
+                    Super close to the venue, less than 5 minutes away. Perfect if
+                    you want the redwood forest experience.
+                  </li>
+                  <li>
+                    <a href="http://www.santacruzredwoodsrvresort.com/">
+                      Santa Cruz Redwoods RV resort
+                    </a><br />
+                    Only 10 minutes from the venue. Perfect if you want the
+                    redwood forest experience.
+                  </li>
+                  <li>
+                    <a href="https://www.parks.ca.gov/?page_id=542">
+                      New Brighton State Beach Campground
+                    </a><br />
+                    This is 20 minutes from the venue but allows you to stay
+                    very close to the beach if that's what you would like to do.
+                  </li>
+                  <li>
+                    <a href="http://www.santacruzharbor.org/rvInformation.html">
+                      Santa Cruz Harbor RV Park
+                    </a><br />
+                    This is 20 minutes from the venue but allows you to stay
+                    very close to the beach if that's what you would like to do.
+                  </li>
+                </ul>
+
+                <li>Others</li>
+                <ul>
+                  <li>
+                    <a href="http://tinyurl.com/z6atj6n">Airbnb</a> -
+                    There’s tons of airbnbs around in Santa Cruz and
+                    surrounding area, this gives you a lot of options whether
+                    you want a cabin, house, close to the beach, downtown, etc.
+                  </li>
+                </ul>
+              </ul>
+            </ul>
           </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3184.695607899326!2d-122.06463068468003!3d37.04090347989969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e46b5c05f0a89%3A0xf71945ac653a632b!2sRoaring+Camp+Railroads!5e0!3m2!1sen!2sus!4v1488341242768"
-                  id="locationMap"
-                  width="600"
-                  height="450"
-                  frameborder="0"
-                  style="border:0"
-                  allowfullscreen>
-          </iframe>
         </div>
       </div>
 
@@ -99,22 +205,18 @@
         <div class="mainMessage">
           <h1>Fun Things to Do</h1>
           <div class="message">
-            More info coming soon!
-          </div>
-        </div>
-      </div>
-
-      <div id="travelInfoSubPage" class="subPage">
-        <div class="mainMessage">
-          <h1>Travel Information</h1>
-          <div class="message">
+            Santa cruz is one of our favorite places in the world. Our wedding
+            being on Sunday gives everyone the opportunity to not only celebrate
+            with us, but have some time to enjoy this awesome area!
+            <br />
+            <br />
             More info coming soon!
           </div>
         </div>
       </div>
     </div>
 
-    <div id="ourStory" class="componentPage">
+    <div id="ourStory" class="underConstruction componentPage">
       <div class="mainMessage">
         <h1>Our Story</h1>
         <div class="message">

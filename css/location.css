@@ -4,16 +4,18 @@
   left: 0px;
   width: 100%;
   height: 100%;
-  background-image: url("../images/location_bg.png");
+  background-image: url("../images/location_bg.jpg");
   background-size: cover;
 }
-#locationMessage {
-  max-width: calc( 100% - 25vw - 15px );
-}
-#locationMap {
-  height: 25vw;
-  width: 25vw;
-  float: left;
+
+#travelInfoSubPage {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/location_bg.png");
+  background-size: cover;
 }
 
 #funThingsSubPage {
@@ -22,16 +24,6 @@
   left: 100%;
   width: 100%;
   height: 100%;
-  background-image: url("../images/location_bg.png");
-  background-size: cover;
-}
-
-#travelInfoSubPage {
-  position: absolute;
-  top: 0%;
-  left: 200%;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/location_bg.png");
+  background-image: url("../images/fun_things_bg.jpg");
   background-size: cover;
 }

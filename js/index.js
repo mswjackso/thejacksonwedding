@@ -19,13 +19,13 @@ $(document).ready(function() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
-    document.getElementById("titleCountdown").innerHTML = days + "d " + hours + "h "
+    document.getElementById("countdownTimestamp").innerHTML = days + "d " + hours + "h "
     + minutes + "m " + seconds + "s ";
 
     // If the count down is finished, write some text
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("demo").innerHTML = "EXPIRED";
+      document.getElementById("demo").innerHTML = "TODAY";
     }
   }, 1000);
 
@@ -52,16 +52,6 @@ $(document).ready(function() {
     }
 
   });
-  $(document).on('scroll', function() {
-    if ($('.navbar').length > 0) {
-      var navbarTop = $('.navbar').offset().top - $(window).scrollTop();
-      if (navbarTop <= 0 && $('.navbar').hasClass('navbar-fixed-bottom')) {
-        $('.navbar').removeClass('navbar-fixed-bottom').addClass('navbar-static-top');
-      } else if ($(window).scrollTop() <= ($(window).height() - $('.navbar').height())) {
-        $('.navbar').removeClass('navbar-static-top').addClass('navbar-fixed-bottom');
-      }
-    }
-  });
 
   // Set up under construction areas
   $('.underConstruction').each(function() {
@@ -72,20 +62,21 @@ $(document).ready(function() {
     });
     $(this).html(
       '<div style="text-align:center;position:relative;top:40%;height:20%;">\
-        <img src="../images/construction.gif" /><br />\
-        Under Construction\
+        <div id="constructionMelissaMessage">Michael make the website!</div>\
+        <img class="constructionImage" src="../images/construction.jpg" /><br />\
+        <div id="constructionMichaelMessage">Okay</div>\
       </div>'
     );
   });
 
   // Set up picture backgrounds
   var pictureSlots = [
-    [0, 1, 1],
-    [0, 1, 1],
-    [0, 0, 0],
-    [0, 1, 1],
-    [0, 1, 1],
-    [0, 1, 1]
+    [0, 1],
+    [0, 1],
+    [0, 0],
+    [0, 1],
+    [0, 1],
+    [0, 1]
   ];
   fillPictureSlots(pictureSlots);
 
