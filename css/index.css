@@ -119,8 +119,8 @@
 .mainMessage {
   background-color: rgba(255, 255, 255, .7);
   width: calc( 80% - 60px );
-  max-height: calc( 100% - 60px );
-  margin: 30px 10%;
+  max-height: calc( 100% - 160px );
+  margin: 80px 10%;
   padding: 10px 30px;
   overflow: auto;
   border-radius: 15px;
@@ -129,6 +129,9 @@
 .mainMessage>h1 {
   text-align: center;
   text-decoration: underline;
+}
+.mainMessage>.message>img {
+  padding: 15px;
 }
 .mainMessage>.message {
   float: left;
